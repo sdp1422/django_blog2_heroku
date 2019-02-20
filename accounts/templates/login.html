@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block contents %}
+
+<br>
+<div class="container">
+    <h1>Log In</h1>
+    <br><br>
+    <form method="POST">
+        {% csrf_token %}
+        <table class="table table-hover">
+            {{form.as_table}}
+            {{error}}
+        </table>
+        <br>
+        <input class="btn btn-dark" type="submit" value="제출하기">
+    </form>
+</div>
+<!-- 
+<div class="container">
+    <h1> &nbsp; Log In </h1>
+    <form method="POST" action="{% url 'login' %}" class="px-4 py-3">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="exampleDropdownFormEmail1">Username</label>
+            <input type="text" class="form-control" id="exampleDropdownFormEmail1" placeholder="Input your name"
+                name="username" value="">
+        </div>
+        <div class="form-group">
+            <label for="exampleDropdownFormPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleDropdownFormPassword1"
+                placeholder="Input your password" name="password" value="">
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                <label class="form-check-label" for="dropdownCheck">
+                    Remember me
+                </label>
+            </div>
+        </div>
+        <input type="submit" class="btn btn-primary" value="Login">
+    </form>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="{% url 'signup' %}">New around here? Sign up</a>
+
+    <a class="dropdown-item" href="#">Forgot password?</a> 
+</div> -->
+
+
+<!--
+<div class="container">
+
+    <h1>Login</h1>
+
+    <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+        
+        Username:
+        <br>
+        <input type="text" name="username" value="">
+        <br>
+        Password:
+        <br>
+        <input type="password" name="password" value="">
+        <br>
+        <br>
+        <input type="submit" class="btn btn-primary" value="Login">
+
+    </form>
+
+</div>
+-->
+{% endblock %}

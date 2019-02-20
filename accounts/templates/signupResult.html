@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block contents %}
+
+<br>
+<div class="container">
+    <h1>{{error}}</h1>
+    <br><br>
+    <a href="{% url 'signup' %}"><button" class="btn btn-secondary btn-lg btn-block">다시 계정 생성하기</button></a>
+</div>
+
+{% endblock %}
